@@ -1,0 +1,309 @@
+/* BASE ELEMENT STYLES */
+
+* {
+	box-sizing: border-box;
+	}
+	
+body {
+	font-family: 'Montserrat', 'sans-serif';
+	text-align: center;
+	font-size: 0.85em;
+	line-height: 1.5;
+	color: #afafaf;
+	}
+	
+h1,
+h2,
+legend {
+	font-family: 'Fjalla One', 'sans-serif';
+	color: #3f3f3f;
+	}
+	
+h1 {
+	text-transform: uppercase;
+	margin: 0 0 25px 0;
+	padding: 25px 0;
+	}
+	
+p {
+	margin-top: 0px;
+	margin-bottom: 15px;
+	}
+	
+h2,
+legend {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 300;
+	}
+	
+h2 {
+	margin-bottom: 5px;
+	}
+	
+legend {
+	padding: 20px 0;
+	}
+		
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	}
+
+form,
+hr {
+	border-top: solid 2px #3f3f3f;
+	}
+	
+footer {
+	margin-top: 25px;
+	padding-bottom: 100px;
+	font-style: italic;
+	}
+	
+/* INDIVIDUAL ELEMENT STYLES */
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	}
+	
+header .container {
+	border-bottom: solid 4px #3f3f3f;
+	padding-bottom: 20px;
+	margin-bottom: 3px;
+	}
+	
+
+/* FORM FIELDS */
+
+label {
+	display: inline-block;
+	margin-bottom: 0.5em;
+	}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+	display: block;
+	width: 100%;
+	background: #e8eeef;
+	border: none;
+	height: 3.5em;
+	padding: 0 15px;
+	margin-bottom: 20px;
+	color: #3f3f3f;
+	transition: 1.0s;
+	}
+	
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border-color: #003A77;
+	box-shadow: 0 0 10px #53A9FF;
+	transition: 1s;
+	background-color: #fff;
+	}
+
+select {
+	color: #3f3f3f;
+	}
+	
+select option {
+	color: #3f3f3f;
+	}
+	
+select option:first-child {
+	display: none;
+	}
+	
+input::-webkit-input-placeholder {
+	text-align: right;
+	font-style: italic;
+	color: #afafaf;
+	}
+	
+input::-moz-placeholder {
+	text-align: right;
+	font-style: italic;
+	color: #afafaf;
+	}
+	
+input:-ms-input-placeholder {
+	text-align: right;
+	font-style: italic;
+	color: #afafaf;
+	}
+	
+input:moz-placeholder {
+	text-align: right;
+	font-style: italic;
+	color: #afafaf;
+	}
+	
+#zipcode {
+	width: 50%;
+	}
+	
+/* REUSEABLE ELEMENTS */
+
+.br {
+	border-radius: 5px;
+	}
+
+.primary_color {
+	background: #003a77;
+	color: white;
+	}
+	
+.extended_height {
+	height: 7em;
+	}
+	
+.button {
+	width: 100%;
+	padding: 20px 0;
+	border: none;
+	font-size: 1.25rem;
+	}
+	
+.extra_spacing_top {
+	margin-top: 15px;
+	}
+
+.extra_spacing_bottom {
+	margin-bottom: 15px;
+	}
+
+.full_width {
+	width: 100%;
+}
+
+.text_indent {
+	text-indent: 25px;
+}
+	
+/* CUSTOM INPUT STYLING */
+
+
+input[type="radio"],
+input[type="checkbox"] {
+	visibility: hidden;
+	position: absolute;
+	}
+
+.check,
+.radio {
+	position: absolute;
+	display: block;
+	border: 3px solid;
+	width: 20px;
+	height: 20px;
+	transition: 1.0s;
+	}
+
+.check {
+	border-radius: 25%;
+	}
+	
+.radio {
+	border-radius: 50%;
+	}
+
+.radio::before {
+	position: absolute;
+	content: "";
+	width: 10px;
+	height: 10px;
+	border: none;
+	top: 15%;
+	left: 15%;
+	border-radius: 50%;
+	transition: 1.0s;
+	}
+
+.check::before {
+	content: "\2713";
+	position: absolute;
+	left: -23px;
+	top: -3px;
+	color: transparent;
+	transition: 1.0s;
+}
+	
+input[type="radio"]:checked + label .radio,
+input[type="checkbox"]:checked + label .check {
+	border: 3px solid #003a77;
+	}
+	
+input[type="radio"]:checked + label .radio::before {
+	background: #003a77;
+}
+
+input[type="checkbox"]:checked + label .check::before {
+	color: #003a77;
+	}
+	
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+	color: #003a77;
+	}
+	
+
+/* MEDIA QUERIES */
+
+@media (min-width: 760px) {
+	
+	/* BASE ELEMENT STYLES */
+	
+	label {
+		width: 30%;
+		display: inline-block;
+		margin-right: -1%;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	textarea,
+	select {
+		display: inline-block;
+		width: 70%;
+	}
+	
+	/* INDIVIDUAL ELEMENT STYLING */
+	
+	.container {
+		width: 80%;
+	}
+	
+	#zipcode {
+		width: 25%;
+	}
+}
+
+@media (min-width: 1024px) {
+	
+	/* INDIVIDUAL ELEMENT STYLING */
+	
+	.container {
+		width: 65%;
+		max-width: 760px;
+	}
+	
+	/* BASE ELEMENT STYLES */
+	
+	footer {
+		background-color: #003a77;
+		color: white;
+		padding-top: 20px;
+	}
+	
+}

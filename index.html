@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Online Registraion Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Fjalla+One" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+        <header class="header">
+			<h1 class="primary_color">The Code Review</h1>
+            	<div class="container">
+
+            		<h2>Signup for our newsletter</h2>
+                	<p>Get the latest news on how your code is doing right in your inbox</p>
+            	</div><!--/container-->
+        </header><!--/header-->
+
+        <div class="container">
+
+            <form class ="form_contact" action="index.html" method="post">
+
+                    <fieldset>
+
+                    	<legend>Contact Information</legend>
+
+                    	<label for="name">Full Name</label>
+   	                 	<input type="text" id="name" name="user_fullname" placeholder="Required " class="br" required>
+
+                    	<label for="email">Email Address</label>
+                    	<input type="email" id="email" name="user_email" placeholder="Required " class="br" required>
+
+                    	<label for="phone_number">Phone Number</label>
+                    	<input type="tel" id="phone_number" name="user_phone" class="br" placeholder="eg. 0413 123 123 ">
+
+                      	<label for="street_address">Street Address</label>
+                      	<input type="text" id="street_address" name="user_address" class="br" placeholder="eg. 180 Lonsdale Street ">
+
+                      	<label for="city">City</label>
+                      	<input type="text" id="city" name="user_city" class="br" placeholder="eg. Melbourne ">
+
+                      	<label for="state">State</label>
+                      	<select id="state" name="user_state" class="br">
+                        	<option value="" disabled selected>Choose State</option>
+                        	<option value="nt">Northern Territory</option>
+                        	<option value="nsw">New South Wales</option>
+                        	<option value="act">Australian Capital Territory</option>
+                        	<option value="qld">Queensland</option>
+                        	<option value="vic">Victoria</option>
+                        	<option value="tas">Tasmainia</option>
+                        	<option value="wa">Western Australia</option>
+                        	<option value="sa">South Australia</option>
+                      	</select>
+
+                      	<label for="zipcode">Zip Code</label>
+                      	<input type="text" id="zipcode" name="user_zipcode" class="br" placeholder="3000 ">
+
+                    </fieldset>
+
+					<hr>
+                	
+                	<fieldset>
+                		
+                		<legend>Experience</legend>
+                		
+                		<label class ="full_width" for="coding_experience">What is your coding experience</label>
+                        <textarea id="coding_experience" name="user_coding_experience" class="br extended_height full_width"></textarea>
+                		
+                		<p>Your favourite web programming language</p>
+                      
+                       	<input type="radio" id="fav_html" value="fav_html" name="user_favourite_language">
+                        <label class="text_indent" for="fav_html"><span class="radio"></span>HTML</label>
+                        <br>
+                        
+                        <input type="radio" id="fav_css" value="fav_css" name="user_favourite_language">
+                        <label class="text_indent" for="fav_css"><span class="radio"></span>CSS</label>
+                        <br>
+                        
+                        <input type="radio" id="fav_javascript" value="fav_javascript" name="user_favourite_language">
+                        <label class="text_indent" for="fav_javascript"><span class="radio"></span>Javascript</label>
+                        <br>
+                        
+                        <input type="radio" id="fav_java" value="fav_java" name="user_favourite_language">
+                        <label class="text_indent" for="fav_java"><span class="radio"></span>Java</label>
+                        <br>
+                		
+                		<input type="radio" id="fav_php" value="fav_php" name="user_favourite_language">
+                        <label class="text_indent" for="fav_php"><span class="radio"></span>PHP</label>
+                        <br>
+                        
+                        <input type="radio" id="fav_ruby" value="fav_ruby" name="user_favourite_language">
+                        <label class="text_indent" for="fav_ruby"><span class="radio"></span>Ruby</label>
+                        <br>
+                        
+                        <input type="radio" id="fav_python" value="fav_python" name="user_favourite_language">
+                        <label class="text_indent extra_spacing_bottom" for="fav_python"><span class="radio"></span>Python</label>
+                        <br>
+                        
+                        <label class ="full_width" for="coding_story_funny">Funniest experience while coding</label>
+                        <textarea id="coding_story_funny" name="user_coding_story" class="br extended_height full_width"></textarea>
+                		
+                	</fieldset>
+					
+               		<hr>
+               		
+                	<fieldset>
+
+                    	<legend>Newsletter</legend>
+
+                        <p>Select the newsletters you would like to receive</p>
+
+                        <input type="checkbox" id="html_news" value="html_newsletter" name="user_html_news">
+                        <label class="text_indent" for="html_news"><span class="check"></span>HTML News</label>
+                        <br>
+                        
+                        <input type="checkbox" id="css_news" value="css_newsletter" name="user_css_news">
+                        <label class="text_indent" for="css_news"><span class="check"></span>CSS News</label>
+                        <br>
+                        
+                        <input type="checkbox" id="javascript_news" value="javascript_newsletter" name="user_javascript_news">
+                        <label class="text_indent" for="javascript_news"><span class="check"></span>Javascript News</label>
+                        <br>
+
+                        <p class="extra_spacing_top">Newsletter format</p>
+                        
+                        
+                        <input type="radio" id="html_format" value="html" name="user_news_format">
+                        <label class="text_indent" for="html_format"><span class="radio"></span>HTML</label>
+                        <br>
+                        
+                        <input type="radio" id="plain_format" value="plain" name="user_news_format">
+                        <label class="text_indent" for="plain_format"><span class="radio"></span>Plain Text</label>
+                        <br>
+
+                        <label class ="extra_spacing_top full_width" for="topics">Other topics you'd like to hear about</label>
+                        <textarea id="topics" name="user_topics" class="br extended_height full_width"></textarea>
+                        
+                        
+                        
+
+                	</fieldset>
+
+				<button class="button primary_color br" type="submit">Sign Up</button>
+
+            </form>
+
+        </div><!--/container-->
+
+        <footer>
+        	<p>Copyright The Code Review</p>
+        </footer>
+
+
+	</body>
+</html>
